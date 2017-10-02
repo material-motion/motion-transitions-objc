@@ -1,5 +1,5 @@
 /*
- Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+ Copyright 2017-present The Material Motion Authors. All Rights Reserved.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -14,10 +14,21 @@
  limitations under the License.
  */
 
-// MARK: Catalog by convention
+#import <Foundation/Foundation.h>
 
-extension FadeTransitionExampleViewController {
-  class func catalogBreadcrumbs() -> [String] {
-    return ["Fade transition"]
-  }
-}
+/**
+ Whether a target is becoming visible or will no longer be visible by the end of a transition.
+ */
+typedef NS_ENUM(NSUInteger, MDMTransitionAppearance) {
+
+  /**
+   The target element will become visible.
+   */
+  MDMTransitionAppearanceAppearing,
+
+  /**
+   The target element will no longer be visible.
+   */
+  MDMTransitionAppearanceDisappearing,
+
+} NS_SWIFT_NAME(TransitionAppearance);

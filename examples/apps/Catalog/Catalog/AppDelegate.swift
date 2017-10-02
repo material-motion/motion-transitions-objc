@@ -16,6 +16,7 @@
 
 import UIKit
 import CatalogByConvention
+import MotionTransitioning
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,7 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let rootViewController = CBCNodeListViewController(node: CBCCreateNavigationTree())
     rootViewController.title = "Motion Transitions"
-    window.rootViewController = UINavigationController(rootViewController: rootViewController)
+    let navigationController = UINavigationController(rootViewController: rootViewController)
+    navigationController.delegate = TransitionNavigationControllerDelegate.sharedDelegate()
+    window.rootViewController = navigationController
 
     window.makeKeyAndVisible()
     return true

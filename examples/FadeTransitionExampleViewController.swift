@@ -14,7 +14,27 @@
  limitations under the License.
  */
 
-#import "MDMFadeTransition.h"
-#import "MDMTransitionAppearance.h"
-#import "MDMTransitionTarget.h"
-#import "MDMTransitionTimingMode.h"
+import UIKit
+import MotionTransitions
+
+class FadeTransitionExampleViewController: UIViewController {
+
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+
+    title = "Fade"
+
+    self.transitionController.transition = FadeTransition()
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    view.backgroundColor = .lightGray
+  }
+}
+

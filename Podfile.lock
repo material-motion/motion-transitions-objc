@@ -1,12 +1,13 @@
 PODS:
-  - CatalogByConvention (2.1.1)
-  - MotionAnimator (1.1.0):
+  - CatalogByConvention (2.2.0)
+  - MotionAnimator (1.1.3):
     - MotionInterchange
-  - MotionInterchange (1.0.1)
-  - MotionTransitioning (3.1.0)
+  - MotionInterchange (1.1.1)
+  - MotionTransitioning (4.0.1)
   - MotionTransitions (1.0.0):
-    - MotionAnimator
-    - MotionTransitioning
+    - MotionAnimator (~> 1.1)
+    - MotionInterchange (~> 1.1)
+    - MotionTransitioning (~> 4.0)
 
 DEPENDENCIES:
   - CatalogByConvention
@@ -14,15 +15,15 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   MotionTransitions:
-    :path: "./"
+    :path: ./
 
 SPEC CHECKSUMS:
-  CatalogByConvention: c3a5319de04250a7cd4649127fcfca5fe3322a43
-  MotionAnimator: 9d025cda7572737e5db5ca779eb28c767fe6cf45
-  MotionInterchange: 7a7c355ba2ed5d36c5cf2ceb76cacd3d3680dbf5
-  MotionTransitioning: 5a4188866a5b016f7181dd41c1a14f93809688ec
-  MotionTransitions: f28df95c5a17c05513e2a2b9daffa0649bfb2df6
+  CatalogByConvention: 5df5831e48b8083b18570dcb804f20fd1c90694f
+  MotionAnimator: f241c4acd49dea603c3a2ea131727d57853a281b
+  MotionInterchange: 3556642f403549449a49f05653da3bd932a5e072
+  MotionTransitioning: 277501a1a1e6121c0ab523e6a3e00d64659c3367
+  MotionTransitions: b69b734cea7655cc23a47ada24c84d01bf5ce9df
 
-PODFILE CHECKSUM: d7d866496023cbed0b29d2df862884181684f12b
+PODFILE CHECKSUM: 62a245effdfcc5b74d01c75afa4630b724431f3d
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

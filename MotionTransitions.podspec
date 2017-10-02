@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.public_header_files = "src/*.h"
   s.source_files = "src/*.{h,m,mm}", "src/private/*.{h,m,mm}"
 
-  s.dependency "MotionAnimator"
-  s.dependency "MotionTransitioning"
+  s.dependency "MotionAnimator", "~> 1.1"
+  s.dependency "MotionInterchange", "~> 1.1"
+  s.dependency "MotionTransitioning", "~> 4.0"
 end
