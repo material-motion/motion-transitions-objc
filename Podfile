@@ -5,6 +5,7 @@ platform :ios, '8.0'
 target "Catalog" do
   pod 'CatalogByConvention'
   pod 'MotionTransitions', :path => './'
+  pod 'MotionInterchange', :path => '../motion-interchange-objc'
 
   project 'examples/apps/Catalog/Catalog.xcodeproj'
 end

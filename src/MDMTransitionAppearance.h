@@ -14,7 +14,21 @@
  limitations under the License.
  */
 
-#import "MDMFadeTransition.h"
-#import "MDMTransitionAppearance.h"
-#import "MDMTransitionTimingMode.h"
-#import "MDMTransitionTarget.h"
+@import Foundation;
+
+/**
+ Whether a target is becoming visible or will no longer be visible by the end of a transition.
+ */
+typedef NS_ENUM(NSUInteger, MDMTransitionAppearance) {
+
+  /**
+   The target element will become visible.
+   */
+  MDMTransitionAppearanceAppearing,
+
+  /**
+   The target element will no longer be visible.
+   */
+  MDMTransitionAppearanceDisappearing,
+
+} NS_SWIFT_NAME(TransitionAppearance);
