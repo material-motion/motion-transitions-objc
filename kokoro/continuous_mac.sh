@@ -5,8 +5,6 @@ set -e
 # Display commands to stderr.
 set -x
 
-brew install cmake
-
 git clone https://github.com/facebook/xcbuild
 cd xcbuild
 git submodule update --init
