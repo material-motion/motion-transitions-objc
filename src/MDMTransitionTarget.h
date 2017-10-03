@@ -47,6 +47,8 @@ NS_SWIFT_NAME(TransitionTarget)
 
 /**
  Returns the target view for the given context.
+
+ @param context The transition context this target should be resolved from.
  */
 - (nonnull UIView *)resolveWithContext:(nonnull id<MDMTransitionContext>)context;
 
