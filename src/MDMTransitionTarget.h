@@ -42,6 +42,8 @@ NS_SWIFT_NAME(TransitionTarget)
 
 /**
  Creates a target referring to the provided view.
+
+ @param view The provided view will be returned by resolveWithContext, regardless of the context.
  */
 + (nonnull instancetype)targetWithView:(nonnull UIView *)view;
 
