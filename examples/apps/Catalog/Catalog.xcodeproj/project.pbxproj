@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66175B7B1F83D86100B14EAB /* FadeTransitionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66175B7A1F83D86100B14EAB /* FadeTransitionExampleViewController.swift */; };
 		661E64EE1F82951E00E33098 /* FadeTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661E64ED1F82951E00E33098 /* FadeTransitionTests.swift */; };
 		661E64F01F829AB800E33098 /* TransitionTargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661E64EF1F829AB800E33098 /* TransitionTargetTests.swift */; };
 		666FAA841D384A6B000363DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FAA831D384A6B000363DA /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		27E00ABDE052BFA8DA54FF17 /* Pods_Catalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66175B7A1F83D86100B14EAB /* FadeTransitionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransitionExampleViewController.swift; sourceTree = "<group>"; };
 		661E64ED1F82951E00E33098 /* FadeTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransitionTests.swift; sourceTree = "<group>"; };
 		661E64EF1F829AB800E33098 /* TransitionTargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTargetTests.swift; sourceTree = "<group>"; };
 		666FAA801D384A6B000363DA /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 		666FAAA31D384B13000363DA /* examples */ = {
 			isa = PBXGroup;
 			children = (
+				66175B7A1F83D86100B14EAB /* FadeTransitionExampleViewController.swift */,
 			);
 			name = examples;
 			path = ../..;
@@ -432,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66175B7B1F83D86100B14EAB /* FadeTransitionExampleViewController.swift in Sources */,
 				666FAA841D384A6B000363DA /* AppDelegate.swift in Sources */,
 				667A3F541DEE273000CB3A99 /* TableOfContents.swift in Sources */,
 			);
