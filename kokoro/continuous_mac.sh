@@ -8,6 +8,8 @@ set -x
 gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
+# Test pull request.
+
 sudo xcode-select --switch /Applications/Xcode_8.2.app/Contents/Developer
 xcodebuild -version
 
