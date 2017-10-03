@@ -8,6 +8,7 @@ set -x
 gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
+xcode-select --switch /Applications/Xcode_8.2.app/Contents/Developer
 xcodebuild -version
 
 cd github/motion-transitions-objc
