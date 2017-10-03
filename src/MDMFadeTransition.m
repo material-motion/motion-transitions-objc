@@ -30,7 +30,7 @@ static MDMMotionCurve ReverseTimingCurve(MDMMotionCurve timingCurve) {
 }
 
 @implementation MDMFadeTransition {
-  MDMTransitionTarget *_target;
+  MDMTransitionTarget * _Nonnull _target;
 }
 
 - (instancetype)initWithTarget:(MDMTransitionTarget *)target {
@@ -67,7 +67,6 @@ static MDMMotionCurve ReverseTimingCurve(MDMMotionCurve timingCurve) {
   switch (_timingMode) {
     case MDMTransitionTimingModeMirrored:
       animator.timeScaleFactor = context.duration;
-
       animator.shouldReverseValues = context.direction == MDMTransitionDirectionBackward;
 
       if (context.direction == MDMTransitionDirectionBackward) {
