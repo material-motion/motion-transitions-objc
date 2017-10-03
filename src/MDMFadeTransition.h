@@ -51,14 +51,14 @@ MDMSUBCLASSING_RESTRICTED
  The motion timing to use for this fade transition.
 
  By default the animation will use the system default timing function with a duration lasting the
- entire transition.
-
- By default the timing duration and delay are treated as relative to the transition's overall
- duration. To treat these values as absolute time values, enable useAbsoluteTiming.
+ entire transition. The timing duration and delay are treated as relative to the transition's
+ overall duration. To treat these values as absolute time values, change the timingMode to absolute.
  */
 @property(nonatomic, assign) MDMMotionTiming timing;
 
 /**
+ The timing mode affects how the `timing` data is interpreted.
+
  Default value is MDMTransitionTimingModeMirrored.
  */
 @property(nonatomic, assign) MDMTransitionTimingMode timingMode;
