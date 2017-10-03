@@ -36,6 +36,8 @@ MDMSUBCLASSING_RESTRICTED
 
  The target view will fade in or out according to the timing information configured on this
  instance.
+ 
+ @param target The target view to be animated.
  */
 - (nonnull instancetype)initWithTarget:(nonnull MDMTransitionTarget *)target
   NS_DESIGNATED_INITIALIZER;
