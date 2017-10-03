@@ -70,7 +70,7 @@ class FadeTransitionTests: XCTestCase {
 
     waitForExpectations(timeout: 0.1)
 
-    let didDismiss = expectation(description: "Did complete")
+    let didDismiss = expectation(description: "Did dismiss")
     presentedViewController.dismiss(animated: true) {
       didDismiss.fulfill()
     }
@@ -95,7 +95,7 @@ class FadeTransitionTests: XCTestCase {
 
     XCTAssertEqual(presentedViewController.view.layer.opacity, 0)
 
-    let didDismiss = expectation(description: "Did complete")
+    let didDismiss = expectation(description: "Did dismiss")
     presentedViewController.dismiss(animated: true) {
       didDismiss.fulfill()
     }
@@ -120,7 +120,7 @@ class FadeTransitionTests: XCTestCase {
 
     XCTAssertEqual(window.rootViewController!.view.layer.opacity, 0)
 
-    let didDismiss = expectation(description: "Did complete")
+    let didDismiss = expectation(description: "Did dismiss")
     presentedViewController.dismiss(animated: true) {
       didDismiss.fulfill()
     }
@@ -149,7 +149,7 @@ class FadeTransitionTests: XCTestCase {
 
     XCTAssertEqual(customView.layer.opacity, 0)
 
-    let didDismiss = expectation(description: "Did complete")
+    let didDismiss = expectation(description: "Did dismiss")
     presentedViewController.dismiss(animated: true) {
       didDismiss.fulfill()
     }
