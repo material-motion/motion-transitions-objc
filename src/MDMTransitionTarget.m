@@ -30,28 +30,28 @@ typedef NS_ENUM(NSUInteger, Target) {
 }
 
 + (instancetype)targetWithBackView {
-  MDMTransitionTarget *target = [[[self class] alloc] init];
-  if (target) {
-    target->_target = TargetBack;
+  MDMTransitionTarget *transitionTarget = [[[self class] alloc] init];
+  if (transitionTarget) {
+    transitionTarget->_target = TargetBack;
   }
-  return target;
+  return transitionTarget;
 }
 
 + (instancetype)targetWithForeView {
-  MDMTransitionTarget *target = [[[self class] alloc] init];
-  if (target) {
-    target->_target = TargetFore;
+  MDMTransitionTarget *transitionTarget = [[[self class] alloc] init];
+  if (transitionTarget) {
+    transitionTarget->_target = TargetFore;
   }
-  return target;
+  return transitionTarget;
 }
 
 + (instancetype)targetWithView:(UIView *)view {
-  MDMTransitionTarget *target = [[[self class] alloc] init];
-  if (target) {
-    target->_target = TargetView;
-    target->_targetView = view;
+  MDMTransitionTarget *transitionTarget = [[[self class] alloc] init];
+  if (transitionTarget) {
+    transitionTarget->_target = TargetView;
+    transitionTarget->_targetView = view;
   }
-  return target;
+  return transitionTarget;
 }
 
 - (UIView *)resolveWithContext:(id<MDMTransitionContext>)context {
