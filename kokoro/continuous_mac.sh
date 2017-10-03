@@ -11,6 +11,6 @@ gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 cd github/motion-transitions-objc
 pod install --repo-update
 
-xcodebuild build -workspace MotionTransitions.xcworkspace -scheme Catalog -sdk "iphonesimulator" -destination "name=iPhone 6s,OS=10.0" ONLY_ACTIVE_ARCH=YES
+xcodebuild build -workspace MotionTransitions.xcworkspace -scheme Catalog -sdk "iphonesimulator" -destination "name=iPhone 6s,OS=10.0" ONLY_ACTIVE_ARCH=YES | xcpretty && exit ${PIPESTATUS[0]}
 
 bash <(curl -s https://codecov.io/bash)
