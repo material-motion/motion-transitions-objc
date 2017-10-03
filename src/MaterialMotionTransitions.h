@@ -16,5 +16,5 @@
 
 #import "MDMFadeTransition.h"
 #import "MDMTransitionAppearance.h"
-#import "MDMTransitionTimingMode.h"
 #import "MDMTransitionTarget.h"
+#import "MDMTransitionTimingMode.h"
