@@ -16,7 +16,7 @@
 
 #import "MDMFadeTransition.h"
 
-@import MotionAnimator;
+#import "MotionAnimator.h"
 
 static MDMMotionCurve ReverseTimingCurve(MDMMotionCurve timingCurve) {
   MDMMotionCurve reversed = timingCurve;
