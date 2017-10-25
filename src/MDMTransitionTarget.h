@@ -31,7 +31,6 @@
  A target for a view controller transition.
  */
 NS_SWIFT_NAME(TransitionTarget)
-MDM_SUBCLASSING_RESTRICTED
 @interface MDMTransitionTarget : NSObject
 
 /**
