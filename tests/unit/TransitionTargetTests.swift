@@ -18,10 +18,13 @@ import XCTest
 import MotionTransitions
 
 class MockTransitionContext: TransitionContext {
+  func compose(with transition: Transition) {
+  }
+
   func transitionDidEnd() {
   }
 
-  var direction: MDMTransitionDirection = .forward
+  var direction: TransitionDirection = .forward
 
   var duration: TimeInterval = 0.1
 
