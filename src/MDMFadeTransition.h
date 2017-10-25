@@ -15,8 +15,8 @@
  */
 
 #import "MDMTransitionAppearance.h"
-#import "MDMTransitionTimingMode.h"
 #import "MDMTransitionTarget.h"
+#import "MDMTransitionTimingMode.h"
 
 #import <MotionInterchange/MotionInterchange.h>
 #import <MotionTransitioning/MotionTransitioning.h>
@@ -29,7 +29,7 @@
  The target view can be faded in or out with custom timing.
  */
 NS_SWIFT_NAME(FadeTransition)
-MDMSUBCLASSING_RESTRICTED
+MDM_SUBCLASSING_RESTRICTED
 @interface MDMFadeTransition : NSObject <MDMTransition>
 
 /**

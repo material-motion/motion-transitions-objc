@@ -19,11 +19,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#ifndef MDM_SUBCLASSING_RESTRICTED
 #if defined(__has_attribute) && __has_attribute(objc_subclassing_restricted)
-#define MDMSUBCLASSING_RESTRICTED __attribute__((objc_subclassing_restricted))
+#define MDM_SUBCLASSING_RESTRICTED __attribute__((objc_subclassing_restricted))
 #else
-#define MDMSUBCLASSING_RESTRICTED
+#define MDM_SUBCLASSING_RESTRICTED
 #endif
+#endif  // #ifndef MDM_SUBCLASSING_RESTRICTED
 
 /**
  A target for a view controller transition.

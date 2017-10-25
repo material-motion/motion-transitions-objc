@@ -16,7 +16,7 @@
 
 #import "MDMTransitionTarget.h"
 
-@import MotionTransitioning;
+#import "MotionTransitioning.h"
 
 typedef NS_ENUM(NSUInteger, Target) {
   TargetBack,
