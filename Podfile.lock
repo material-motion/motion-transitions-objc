@@ -2,11 +2,11 @@ PODS:
   - CatalogByConvention (2.2.0)
   - MotionAnimator (1.1.3):
     - MotionInterchange
-  - MotionInterchange (1.1.1)
+  - MotionInterchange (1.2.0)
   - MotionTransitioning (4.0.1)
   - MotionTransitions (1.0.0):
     - MotionAnimator (~> 1.1)
-    - MotionInterchange (~> 1.1)
+    - MotionInterchange (~> 1.2)
     - MotionTransitioning (~> 4.0)
 
 DEPENDENCIES:
@@ -20,9 +20,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CatalogByConvention: 5df5831e48b8083b18570dcb804f20fd1c90694f
   MotionAnimator: f241c4acd49dea603c3a2ea131727d57853a281b
-  MotionInterchange: 3556642f403549449a49f05653da3bd932a5e072
+  MotionInterchange: 499c98e7628a8a078905749734dbfedbfae54cca
   MotionTransitioning: 277501a1a1e6121c0ab523e6a3e00d64659c3367
-  MotionTransitions: b69b734cea7655cc23a47ada24c84d01bf5ce9df
+  MotionTransitions: fbe0e37577223614ab44b9e4d4dbeab62e3309d6
 
 PODFILE CHECKSUM: 62a245effdfcc5b74d01c75afa4630b724431f3d
 
