@@ -17,31 +17,6 @@
 import XCTest
 import MotionTransitions
 
-class MockTransitionContext: TransitionContext {
-  func compose(with transition: Transition) {
-  }
-
-  func transitionDidEnd() {
-  }
-
-  var direction: TransitionDirection = .forward
-
-  var duration: TimeInterval = 0.1
-
-  var sourceViewController: UIViewController? = nil
-
-  var backViewController = UIViewController()
-
-  var foreViewController = UIViewController()
-
-  var containerView = UIView()
-
-  var presentationController: UIPresentationController? = nil
-
-  func `defer`(toCompletion work: @escaping () -> Void) {
-  }
-}
-
 class TransitionTargetTests: XCTestCase {
 
   func testCustomTargetResolution() {

@@ -19,144 +19,85 @@ import MotionTransitions
 
 class FadeTransitionTests: XCTestCase {
 
-  private var window: UIWindow!
+  var ctx: MockTransitionContext!
+
   override func setUp() {
-    window = UIWindow()
-    window.rootViewController = UIViewController()
-    window.makeKeyAndVisible()
-    window.layer.speed = 10
+    super.setUp()
+
+    ctx = MockTransitionContext()
+    ctx.duration = 0.01
+
+    ctx.transitionDidEndExpectation = expectation(description: "Did complete")
   }
 
   override func tearDown() {
-    window = nil
+    ctx = nil
+
+    super.tearDown()
   }
 
   func testDoesComplete() {
-    let presentedViewController = UIViewController()
-    presentedViewController.transitionController.transition = FadeTransition()
+    let transition = FadeTransition()
+    transition.start(with: ctx)
 
-    let didComplete = expectation(description: "Did complete")
-    window.rootViewController!.present(presentedViewController, animated: true) {
-      didComplete.fulfill()
-    }
-
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(window.rootViewController!.presentedViewController, presentedViewController)
+    waitForExpectations(timeout: ctx.duration * 2)
   }
 
   func testDoesFadeIn() {
-    let presentedViewController = UIViewController()
-    presentedViewController.transitionController.transition = FadeTransition()
+    let transition = FadeTransition()
+    transition.start(with: ctx)
 
-    let didComplete = expectation(description: "Did complete")
-    window.rootViewController!.present(presentedViewController, animated: true) {
-      didComplete.fulfill()
-    }
+    waitForExpectations(timeout: ctx.duration * 2)
 
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(presentedViewController.view.layer.opacity, 1)
+    XCTAssertEqual(ctx.foreViewController.view.layer.opacity, 1)
+    XCTAssertEqual(ctx.backViewController.view.layer.opacity, 1)
   }
 
   func testDoesFadeOutDuringDismissal() {
-    let presentedViewController = UIViewController()
-    presentedViewController.transitionController.transition = FadeTransition()
+    ctx.direction = .backward
 
-    let didComplete = expectation(description: "Did complete")
-    window.rootViewController!.present(presentedViewController, animated: true) {
-      didComplete.fulfill()
-    }
+    let transition = FadeTransition()
+    transition.start(with: ctx)
 
-    waitForExpectations(timeout: 0.1)
+    waitForExpectations(timeout: ctx.duration * 2)
 
-    let didDismiss = expectation(description: "Did dismiss")
-    presentedViewController.dismiss(animated: true) {
-      didDismiss.fulfill()
-    }
-
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(presentedViewController.view.layer.opacity, 0)
+    XCTAssertEqual(ctx.foreViewController.view.layer.opacity, 0)
+    XCTAssertEqual(ctx.backViewController.view.layer.opacity, 1)
   }
 
-  func testDoesFadeOut() {
-    let presentedViewController = UIViewController()
+  func testDoesFadeOutWhenDisappearing() {
     let transition = FadeTransition()
     transition.appearance = .disappearing
-    presentedViewController.transitionController.transition = transition
+    transition.start(with: ctx)
 
-    let didComplete = expectation(description: "Did complete")
-    window.rootViewController!.present(presentedViewController, animated: true) {
-      didComplete.fulfill()
-    }
+    waitForExpectations(timeout: ctx.duration * 2)
 
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(presentedViewController.view.layer.opacity, 0)
-
-    let didDismiss = expectation(description: "Did dismiss")
-    presentedViewController.dismiss(animated: true) {
-      didDismiss.fulfill()
-    }
-
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(presentedViewController.view.layer.opacity, 1)
+    XCTAssertEqual(ctx.foreViewController.view.layer.opacity, 0)
+    XCTAssertEqual(ctx.backViewController.view.layer.opacity, 1)
   }
 
-  func testResolvesBackTarget() {
-    let presentedViewController = UIViewController()
+  func testResolutionForBackTarget() {
     let transition = FadeTransition(target: .withBackView())
     transition.appearance = .disappearing
-    presentedViewController.transitionController.transition = transition
+    transition.start(with: ctx)
 
-    let didComplete = expectation(description: "Did complete")
-    window.rootViewController!.present(presentedViewController, animated: true) {
-      didComplete.fulfill()
-    }
+    waitForExpectations(timeout: ctx.duration * 2)
 
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(window.rootViewController!.view.layer.opacity, 0)
-
-    let didDismiss = expectation(description: "Did dismiss")
-    presentedViewController.dismiss(animated: true) {
-      didDismiss.fulfill()
-    }
-
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(window.rootViewController!.view.layer.opacity, 1)
+    XCTAssertEqual(ctx.backViewController.view.layer.opacity, 0)
+    XCTAssertEqual(ctx.foreViewController.view.layer.opacity, 1)
   }
 
-  func testResolvesCustomTarget() {
-    let presentedViewController = UIViewController()
-
+  func testResolutionForCustomTarget() {
     let customView = UIView()
-    presentedViewController.view.addSubview(customView)
-
     let transition = FadeTransition(target: .init(view: customView))
     transition.appearance = .disappearing
-    presentedViewController.transitionController.transition = transition
+    transition.start(with: ctx)
 
-    let didComplete = expectation(description: "Did complete")
-    window.rootViewController!.present(presentedViewController, animated: true) {
-      didComplete.fulfill()
-    }
-
-    waitForExpectations(timeout: 0.1)
+    waitForExpectations(timeout: ctx.duration * 2)
 
     XCTAssertEqual(customView.layer.opacity, 0)
-
-    let didDismiss = expectation(description: "Did dismiss")
-    presentedViewController.dismiss(animated: true) {
-      didDismiss.fulfill()
-    }
-
-    waitForExpectations(timeout: 0.1)
-
-    XCTAssertEqual(customView.layer.opacity, 1)
+    XCTAssertEqual(ctx.backViewController.view.layer.opacity, 1)
+    XCTAssertEqual(ctx.foreViewController.view.layer.opacity, 1)
   }
 }
 
