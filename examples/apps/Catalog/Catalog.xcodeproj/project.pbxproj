@@ -10,6 +10,7 @@
 		66175B7B1F83D86100B14EAB /* FadeTransitionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66175B7A1F83D86100B14EAB /* FadeTransitionExampleViewController.swift */; };
 		661E64EE1F82951E00E33098 /* FadeTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661E64ED1F82951E00E33098 /* FadeTransitionTests.swift */; };
 		661E64F01F829AB800E33098 /* TransitionTargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661E64EF1F829AB800E33098 /* TransitionTargetTests.swift */; };
+		663B998C1FA255D800181015 /* MockTransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B998B1FA255D800181015 /* MockTransitionContext.swift */; };
 		666FAA841D384A6B000363DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666FAA831D384A6B000363DA /* AppDelegate.swift */; };
 		666FAA8B1D384A6B000363DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666FAA8A1D384A6B000363DA /* Assets.xcassets */; };
 		666FAA8E1D384A6B000363DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666FAA8C1D384A6B000363DA /* LaunchScreen.storyboard */; };
@@ -43,6 +44,7 @@
 		66175B7A1F83D86100B14EAB /* FadeTransitionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransitionExampleViewController.swift; sourceTree = "<group>"; };
 		661E64ED1F82951E00E33098 /* FadeTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeTransitionTests.swift; sourceTree = "<group>"; };
 		661E64EF1F829AB800E33098 /* TransitionTargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTargetTests.swift; sourceTree = "<group>"; };
+		663B998B1FA255D800181015 /* MockTransitionContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTransitionContext.swift; sourceTree = "<group>"; };
 		666FAA801D384A6B000363DA /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666FAA831D384A6B000363DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Catalog/AppDelegate.swift; sourceTree = "<group>"; };
 		666FAA8A1D384A6B000363DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				661E64ED1F82951E00E33098 /* FadeTransitionTests.swift */,
+				663B998B1FA255D800181015 /* MockTransitionContext.swift */,
 				661E64EF1F829AB800E33098 /* TransitionTargetTests.swift */,
 			);
 			name = tests;
@@ -473,6 +476,7 @@
 			files = (
 				661E64EE1F82951E00E33098 /* FadeTransitionTests.swift in Sources */,
 				661E64F01F829AB800E33098 /* TransitionTargetTests.swift in Sources */,
+				663B998C1FA255D800181015 /* MockTransitionContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
